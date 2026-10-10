@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MakeWorks 98</title>
+  <link rel="icon" href="favicon.ico">
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #000; color: #ccc; font: 12px monospace; }
+    #screen { position: absolute; image-rendering: pixelated; image-rendering: crisp-edges; outline: none; }
+    #stats { position: absolute; left: 0; bottom: 0; padding: 4px 8px; white-space: pre; }
+  </style>
+</head>
+<body>
+  <canvas id="screen" width="656" height="480" tabindex="0"></canvas>
+  <div id="stats">Loading .NET runtime…</div>
+  <script type="module" src="main.js"></script>
+  <!-- Page views, counted by GoatCounter (no cookies). The query is left out of the path, so
+       ?reset and ?--chat count as the page itself. count.js ignores localhost, so ./run.sh
+       doesn't count. main.js adds a "booted" event once the program is running. -->
+  <script>window.goatcounter = { path: () => location.pathname };</script>
+  <script data-goatcounter="https://jmcd.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
