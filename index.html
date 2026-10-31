@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MakeWorks 98 – a cosy office game on a late-90s desktop</title>
+  <meta name="description" content="A cosy, low-stress game set on a late-90s office desktop. Do favours for colleagues, chat, play Solitaire, and watch the years go by. Free in your browser.">
+  <link rel="canonical" href="https://makeworks98.com/">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <meta name="theme-color" content="#000000">
+  <!-- How a shared link looks (Open Graph for most sites, twitter: for X). URLs must be absolute.
+       og-image.png is the desktop on day 250, Start > Programs > Games open over Lookout Express. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MakeWorks 98">
+  <meta property="og:url" content="https://makeworks98.com/">
+  <meta property="og:title" content="MakeWorks 98">
+  <meta property="og:description" content="A cosy, low-stress game set on a late-90s office desktop. Do favours for colleagues, chat, play Solitaire, and watch the years go by.">
+  <meta property="og:image" content="https://makeworks98.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A 1990s desktop with the Start menu open: Programs lists Lookout Express, Natter, Jotpad, Spreadsheet, Paint and more, and Games lists Solitaire, FreeCell, Minesweeper, Mahjong and others, over the Lookout Express inbox and a sticky note.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "MakeWorks 98",
+    "url": "https://makeworks98.com/",
+    "description": "A cosy, low-stress game set on a late-90s office desktop. Do favours for colleagues, chat, play Solitaire, and watch the years go by.",
+    "image": "https://makeworks98.com/og-image.png",
+    "genre": ["Simulation", "Idle", "Casual"],
+    "gamePlatform": "Web browser",
+    "applicationCategory": "Game",
+    "operatingSystem": "Any",
+    "inLanguage": "en-GB",
+    "author": { "@type": "Person", "name": "jmcd" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+  }
+  </script>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #000; color: #ccc; font: 12px monospace; }
+    #screen { position: absolute; image-rendering: pixelated; image-rendering: crisp-edges; outline: none; }
+    #stats { position: absolute; left: 0; bottom: 0; padding: 4px 8px; white-space: pre; }
+    #links { position: absolute; right: 0; bottom: 0; padding: 4px 8px; white-space: pre; background: #000; }
+    #links a { color: inherit; }
+    /* The bar is one line: on a first visit, when the testers' starts are offered too, a narrow
+       window has no room for the disclaimer as well. It is back from the second visit. */
+    @media (max-width: 1150px) { #links:has(#starts) #disclaimer { display: none; } }
+  </style>
+</head>
+<body>
+  <canvas id="screen" width="656" height="480" tabindex="0"></canvas>
+  <div id="stats">Loading .NET runtime…</div>
+  <noscript><p>MakeWorks 98 is a cosy, low-stress game set on a late-90s office desktop: do favours for
+    colleagues, chat, play Solitaire, and watch the years go by. It runs in your browser and needs
+    JavaScript and WebAssembly turned on.</p></noscript>
+  <div id="links" hidden><span id="notice"></span>  <span id="disclaimer" title="MakeWorks 98 is an affectionate parody of late-90s office computing, not affiliated with or endorsed by Microsoft.">Not affiliated with Microsoft.</span>  <a href="#" id="screenshot" title="Or press F10 or Print Screen">Screenshot</a>  <a href="#" id="save-file">Save office to file…</a>  <a href="#" id="load-file">Load office from file…</a>  <a href="THIRD_PARTY_NOTICES.txt" target="_blank">Licences</a><input type="file" id="load-picker" accept=".zip" hidden></div>
+  <script type="module" src="main.js"></script>
+  <!-- Page views, counted by GoatCounter (no cookies). The query is left out of the path, so
+       ?reset and ?--chat count as the page itself. count.js ignores localhost, so ./run.sh
+       doesn't count. main.js adds a "booted" event once the program is running. -->
+  <script>window.goatcounter = { path: () => location.pathname };</script>
+  <script data-goatcounter="https://jmcd.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
